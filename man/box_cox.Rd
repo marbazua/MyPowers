@@ -4,12 +4,15 @@
 \alias{box_cox}
 \title{Function for aplying a Box-Cox transformation}
 \usage{
-box_cox(x, l)
+box_cox(x, l, add_plot = FALSE)
 }
 \arguments{
 \item{x}{Vector to apply the Box-Cox to}
 
 \item{l}{The parameter lambda}
+
+\item{add_plot}{If a plot with the transformed vector should be plotted.
+(The default is FALSE)}
 }
 \value{
 The vector of the transformed \code{x}.

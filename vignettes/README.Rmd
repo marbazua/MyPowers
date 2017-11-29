@@ -1,0 +1,35 @@
+---
+title: "README"
+author: "Mar Bazua-Lobato"
+output: github_document
+---
+
+**Note**: This package was developed as an assignment. It's not a serious package.
+
+POWERS
+========
+
+This is an R package that provides functions to: square, cube, and compute the reciprocal of a vector. You can also apply a Box-Cox transformation to a vector and find the root(s) of a second degree polynomial. 
+
+Installation
+------------
+
+You can install powers from github with:
+
+```{r}
+# install.packages("devtools")
+devtools::install_github("marbazua/powers")
+```
+
+A few examples of how to use the package:
+-------
+```{r}
+powers::square(2)
+powers::cube(1:10, add_plot=TRUE)
+```
+
+For more details please see the Vignette.
+
+For Developers
+--------------
+The package has two internal functions:  `pow` that is used for the `square`, `cube`, and `reciprocal`. `c_root` that is used in `polynom`.

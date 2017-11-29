@@ -6,11 +6,14 @@
 \alias{powers-package}
 \title{Computation of Powers}
 \description{
-With this package you can apply powers to your vectors by
-using functions
+With this package you can
+\itemize{
+\item Square a vector \code{square(x,...)}
+\item Cube a vector \code{cube(x,..)}
+\item Obtain the reciprocal of a vector \code{reciprocal(x,...)}
+\item Apply a Box-Cox transformation to a vector \code{box_cox(x,l,..)}
+\item Find the solution of a second degree polynomial \code{polynom(a,b,c)}
 }
-\details{
-You can also find the solution of a second degree polynomial
 }
 \note{
 This package is only for class assignment purposes

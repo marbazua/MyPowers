@@ -9,27 +9,45 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-__Note__: This package isn't actually meant to be "serious". I made it just for teaching purposes.
+__Note__: This package was developed as an assignment. It's not a serious package.
 
-Want to compute powers without having to use `^` or `**`? Give `sqrt` some friends by loading the `powers` package! 
+With this package you can: square, cube, and compute the reciprocal of a vector. You can also apply a Box-Cox transformation to a vector and find the solution of a second degree polynomial. 
+
+By just using a function!
 
 ```{r}
 library(powers)
 ```
 
-Want squares, cubes, or reciprocals? Easy.
+To compute squares, cubes, or reciprocals: 
 
 ```{r}
 square(1:10)
 cube(1:10)
+reciprocal(1:10)
 ```
 
-`apply`-family friendly, too!
-
+Want to plot the results?
 ```{r}
-my_list <- list(1:10, 0.5, -0.7)
-## So base-R-boring!
-lapply(my_list, function(x) x^2)
-## Use powers instead!
-lapply(my_list, square)
+square(1:10, add_plot=TRUE)
+cube(1:10, add_plot=TRUE)
+reciprocal(1:10, add_plot=TRUE)
 ```
+
+For applying a Box-Cox transformation just use the `box_cox()` function :
+```{r}
+box_cox(1:10, 3)
+```
+
+Want to plot the transformed vector?
+```{r}
+box_cox(1:10, 3, add_plot=TRUE)
+```
+
+Do you want to obtain the roots of $8x^2+9x+1=0$?
+Just use `polynom()`:
+```{r}
+polynom(8,9,1)
+```
+
+
